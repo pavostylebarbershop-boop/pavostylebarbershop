@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pavo Style Barber Shop | Hialeah, FL</title>
+
+<meta name="description" content="Pavo Style Barber Shop in Hialeah, FL. Professional haircuts, fades and beard grooming. Open daily 9AM to 9PM. Book by calling or texting.">
+<meta name="keywords" content="barber shop hialeah, barber near me, fade haircut, beard trim">
+<meta name="author" content="Pavo Style Barber Shop">
+
+<meta property="og:title" content="Pavo Style Barber Shop">
+<meta property="og:description" content="Professional barber shop in Hialeah. Call or text to book your appointment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pavostylebarbershop.com">
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#0b0b0b;
+  color:#f5f5f5;
+}
+header{
+  padding:20px;
+  background:#000;
+  border-bottom:1px solid #222;
+}
+header h1{margin:0;font-size:28px}
+header span{color:#d6b15e}
+
+.container{max-width:1100px;margin:auto;padding:40px 20px}
+
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:30px;
+}
+
+.card{
+  background:#121212;
+  border-radius:16px;
+  padding:25px;
+  border:1px solid #222;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:14px 20px;
+  background:#d6b15e;
+  color:#000;
+  font-weight:bold;
+  border-radius:14px;
+  text-decoration:none;
+}
+
+.btn.secondary{
+  background:none;
+  color:#fff;
+  border:1px solid #d6b15e;
+}
+
+.section{margin-top:60px}
+.section h2{color:#d6b15e;margin-bottom:12px}
+
+ul{padding-left:18px}
+li{margin-bottom:6px}
+
+.map iframe{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:14px;
+}
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  border-top:1px solid #222;
+  color:#aaa;
+}
+
+/* Fixed Call Button */
+.call-fixed{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#d6b15e;
+  color:#000;
+  padding:16px 20px;
+  border-radius:40px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+  z-index:999;
+}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Pavo Style <span>Barber Shop</span></h1>
+</header>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="card">
+    <h2>Professional Barber Shop in Hialeah</h2>
+
+    <p>
+      At <strong>Pavo Style Barber Shop</strong>, we specialize in clean cuts,
+      sharp fades, beard grooming and modern styles in a professional environment.
+    </p>
+
+    <p>
+      <strong>Appointments available.</strong><br>
+      Book your appointment by <strong>calling or texting +1 (786) 819-9106</strong>.
+    </p>
+
+    <p><strong>Open daily:</strong> 9:00 AM – 9:00 PM</p>
+
+    <a class="btn" href="https://wa.me/17868199106" target="_blank">💬 Book via WhatsApp</a>
+    <a class="btn secondary" href="tel:+17868199106">📞 Call Now</a>
+
+    <hr style="margin:25px 0;border-color:#222">
+
+    <p>
+      <strong>Reservaciones disponibles.</strong><br>
+      Puede reservar su turno llamando o escribiendo al
+      <strong>+1 (786) 819-9106</strong>.
+    </p>
+  </div>
+
+  <!-- LOCATION -->
+  <div class="card">
+    <h3>Location</h3>
+    <p>
+      1051 W 29th St #2<br>
+      Hialeah, FL 33012
+    </p>
+
+    <div class="map">
+      <iframe
+        loading="lazy"
+        src="https://www.google.com/maps?q=1051+W+29th+St+%232+Hialeah+FL+33012&output=embed">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <h2>Services / Servicios</h2>
+  <ul>
+    <li>Men’s Haircuts / Corte de Caballero</li>
+    <li>Fade & Taper</li>
+    <li>Beard Trim & Grooming / Barba</li>
+    <li>Line Up</li>
+    <li>Kids Haircuts / Niños</li>
+  </ul>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>✔ Experienced barbers</li>
+    <li>✔ Clean and professional environment</li>
+    <li>✔ Walk-ins & appointments available</li>
+    <li>✔ Open 7 days a week</li>
+  </ul>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2>Contact</h2>
+  <p><strong>Address:</strong> 1051 W 29th St #2, Hialeah, FL 33012</p>
+  <p><strong>Phone / WhatsApp:</strong> +1 (786) 819-9106</p>
+  <p><strong>Hours:</strong> Daily 9:00 AM – 9:00 PM</p>
+</section>
+
+</div>
+
+<footer>
+  © <span id="year"></span> Pavo Style Barber Shop · Hialeah, FL
+</footer>
+
+<!-- FIXED CALL BUTTON -->
+<a class="call-fixed" href="tel:+17868199106">📞 CALL TO BOOK</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
