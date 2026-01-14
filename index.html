@@ -5,92 +5,179 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pavo Style Barber Shop | Hialeah</title>
-
-<meta name="description" content="Pavo Style Barber Shop en Hialeah. Cortes modernos, fades, barba y servicio profesional.">
-<meta name="author" content="Pavo Style Barber Shop">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Pavo Style Barber Shop">
-<meta property="og:description" content="Barbería profesional en Hialeah. Reserva tu turno hoy.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pavostylebarbershop.com">
-<meta property="og:image" content="logo.png">
+<meta name="description" content="Pavo Style Barber Shop en Hialeah. Cortes premium, fades y servicio profesional.">
 
 <style>
+*{box-sizing:border-box}
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#0b0b0b;
-    color:#fff;
-    text-align:center;
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  background:#0b0b0b;
+  color:#fff;
+  text-align:center;
+  overflow-x:hidden;
 }
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glow{0%{box-shadow:0 0 0 rgba(212,175,55,0)}50%{box-shadow:0 0 25px rgba(212,175,55,.45)}100%{box-shadow:0 0 0 rgba(212,175,55,0)}}
 
 header{
-    background:#000;
-    padding:30px;
+  background:radial-gradient(circle at top,#111,#000);
+  padding:40px 20px;
+  animation:fadeUp 1s ease;
 }
-
-header img{
-    max-width:260px;
-    width:100%;
-}
+header img{max-width:260px;width:100%}
 
 section{
-    padding:40px 20px;
+  padding:52px 18px;
+  animation:fadeUp 1.2s ease;
 }
 
-h1,h2{
-    color:#d4af37;
+h1,h2{color:#d4af37;letter-spacing:1px}
+.subtitle{color:#cfcfcf;margin:8px 0 26px}
+
+.card{
+  max-width:1200px;
+  margin:0 auto;
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:28px 20px;
 }
 
+/* STATUS */
 .status{
-    font-size:1.3em;
-    font-weight:bold;
-    margin:15px 0;
+  font-size:1.3rem;
+  font-weight:900;
+  margin:14px 0;
+  padding:10px 18px;
+  border-radius:999px;
+  display:inline-block;
+  background:rgba(212,175,55,.08);
+  animation:glow 2.2s infinite;
 }
+.open{color:#2ecc71}
+.closed{color:#e74c3c}
 
-.open{ color:#2ecc71; }
-.closed{ color:#e74c3c; }
-
+/* BUTTONS */
+.buttons{
+  margin-top:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
 .button{
-    display:inline-block;
-    margin:10px;
-    padding:14px 22px;
-    background:#d4af37;
-    color:#000;
-    text-decoration:none;
-    font-weight:bold;
-    border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 20px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  transition:.25s ease;
 }
+.button:hover{transform:translateY(-3px) scale(1.05)}
+.maps{background:#d4af37;color:#000}
+.whatsapp{background:#25d366;color:#000}
+.tiktok{background:#000;color:#fff;border:2px solid #d4af37}
 
-.whatsapp{
-    background:#25d366;
-    color:#000;
-}
-
-.tiktok{
-    background:#010101;
-    color:#fff;
-    border:2px solid #d4af37;
-}
-
+/* GALLERY */
 .gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-    margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.media{
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  background:#000;
+  box-shadow:0 18px 35px rgba(0,0,0,.6);
+}
+.media video{
+  width:100%;
+  display:block;
+}
+.tap-sound{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(0,0,0,.55);
+  border:1px solid rgba(255,255,255,.15);
+  font-weight:800;
+  font-size:.85rem;
 }
 
-.gallery img, .gallery video{
-    width:100%;
-    border-radius:10px;
+/* GOOGLE RATING */
+.google-rating{
+  margin:20px auto 10px;
+}
+.rating-number{
+  font-size:4.2rem;
+  font-weight:900;
+  color:#d4af37;
+}
+.rating-stars{
+  font-size:1.6rem;
+  letter-spacing:4px;
+  color:#ffd15c;
+}
+.rating-text{
+  color:#cfcfcf;
+  font-size:.95rem;
+}
+
+/* SLIDER */
+.slider-container{
+  overflow:hidden;
+  margin-top:25px;
+}
+.slider-track{
+  display:flex;
+  width:600%;
+  animation:slideReviews 36s infinite;
+}
+.slider-container:hover .slider-track{
+  animation-play-state:paused;
+}
+.review-slide{
+  min-width:100%;
+  padding:26px;
+  background:rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+}
+.stars{color:#ffd15c;font-weight:900}
+.review-slide small{color:#bdbdbd}
+.review-slide p{margin-top:12px;line-height:1.6;color:#e6e6e6}
+
+@keyframes slideReviews{
+  0%,16%{transform:translateX(0)}
+  20%,36%{transform:translateX(-100%)}
+  40%,56%{transform:translateX(-200%)}
+  60%,76%{transform:translateX(-300%)}
+  80%,96%{transform:translateX(-400%)}
+  100%{transform:translateX(0)}
+}
+
+/* MAP */
+.map iframe{
+  width:100%;
+  height:360px;
+  border:0;
+  border-radius:16px;
+  margin-top:20px;
 }
 
 footer{
-    background:#000;
-    padding:20px;
-    font-size:0.9em;
-    color:#aaa;
+  background:#000;
+  padding:22px;
+  color:#aaa;
+  font-size:.9rem;
 }
 </style>
 </head>
@@ -98,76 +185,151 @@ footer{
 <body>
 
 <header>
-    <img src="logo.png" alt="Pavo Style Barber Shop">
+  <img src="logo.png" alt="Pavo Style Barber Shop">
 </header>
 
 <section>
+  <div class="card">
     <h1>Pavo Style Barber Shop</h1>
-    <p>Barbería profesional en Hialeah. Cortes modernos, fades, barba y estilo.</p>
+    <div class="subtitle">Fades limpios · Estilo premium · Servicio profesional</div>
 
     <div id="status" class="status"></div>
 
     <p>
-        ⏰ <strong>Lunes a Sábado:</strong> 9:00 AM – 9:00 PM<br>
-        ⏰ <strong>Domingo:</strong> 9:00 AM – 4:00 PM
+      ⏰ <strong>Lunes a Sábado:</strong> 9:00 AM – 9:00 PM<br>
+      ⏰ <strong>Domingo:</strong> 9:00 AM – 4:00 PM<br><br>
+      📍 Pavo style barber shop, 1051 W 29th St #2, Hialeah, FL 33012<br>
+      📞 +1 (786) 819-9106
     </p>
 
-    <a class="button" target="_blank"
-       href="https://www.google.com/maps/search/?api=1&query=Pavo+style+barber+shop,+1051+W+29th+St+%232,+Hialeah,+FL+33012">
-       📍 Ver ubicación en Google Maps
-    </a>
+    <div class="buttons">
+      <a class="button maps" target="_blank"
+         href="https://www.google.com/maps/search/?api=1&query=Pavo+style+barber+shop,+1051+W+29th+St+%232,+Hialeah,+FL+33012">
+         📍 Ubicación
+      </a>
 
-    <a class="button whatsapp" target="_blank"
-       href="https://wa.me/17868199106?text=Hola%20Pavo%20Style%20Barber%20Shop,%20quisiera%20reservar%20un%20turno.%20Gracias.">
-       💬 Reservar por WhatsApp
-    </a>
+      <a class="button whatsapp" target="_blank"
+         href="https://wa.me/17868199106?text=Hola%20Pavo%20Style%20Barber%20Shop,%20quisiera%20reservar%20un%20turno.%20Gracias.">
+         💬 WhatsApp
+      </a>
 
-    <a class="button tiktok" target="_blank"
-       href="https://www.tiktok.com/@rosnielgonzale">
-       🎵 Síguenos en TikTok
-    </a>
+      <a class="button tiktok" target="_blank"
+         href="https://www.tiktok.com/@rosnielgonzale">
+         🎵 TikTok
+      </a>
+    </div>
+  </div>
 </section>
 
 <section>
-    <h2>Galería</h2>
-    <div class="gallery">
-        <video controls src="gallery/video1.mp4"></video>
-        <video controls src="gallery/video2.mp4"></video>
-        <video controls src="gallery/video3.mp4"></video>
-        <!-- Para fotos futuras:
-        <img src="gallery/foto1.jpg">
-        -->
+  <h2>Galería</h2>
+  <div class="gallery">
+    <div class="media">
+      <video class="autoVideo" autoplay muted loop playsinline>
+        <source src="gallery/video1.mp4" type="video/mp4">
+      </video>
+      <div class="tap-sound">🔊 Toca para sonido</div>
     </div>
+
+    <div class="media">
+      <video class="autoVideo" autoplay muted loop playsinline>
+        <source src="gallery/video2.mp4" type="video/mp4">
+      </video>
+      <div class="tap-sound">🔊 Toca para sonido</div>
+    </div>
+
+    <div class="media">
+      <video class="autoVideo" autoplay muted loop playsinline>
+        <source src="gallery/video3.mp4" type="video/mp4">
+      </video>
+      <div class="tap-sound">🔊 Toca para sonido</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Reseñas de Google</h2>
+
+    <div class="google-rating">
+      <div class="rating-number">5.0</div>
+      <div class="rating-stars">★★★★★</div>
+      <div class="rating-text">Basado en reseñas reales de Google</div>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track">
+
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <strong>Pedro Bolufe Soler</strong><br>
+          <small>Hace un mes</small>
+          <p>El mejor barbero de Miami, local limpio y excelente trato.</p>
+        </div>
+
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <strong>Víctor Manuel Santos Pérez</strong><br>
+          <small>Hace un mes</small>
+          <p>Lugar súper estético, limpio y muy profesional.</p>
+        </div>
+
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <strong>Diego Gómez Duarte</strong><br>
+          <small>Hace un mes</small>
+          <p>Un hidden gem con un verdadero artista detrás de la silla.</p>
+        </div>
+
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <strong>Manuel Lamelas</strong><br>
+          <small>Local Guide</small>
+          <p>Servicio estelar y muy profesional. 100% recomendado.</p>
+        </div>
+
+        <div class="review-slide">
+          <div class="stars">★★★★★</div>
+          <strong>Alejandro Sarmiento</strong><br>
+          <small>Hace un mes</small>
+          <p>Top 1 en Miami. Los mejores barberos están aquí.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe
+        loading="lazy"
+        src="https://www.google.com/maps?q=Pavo%20style%20barber%20shop,%201051%20W%2029th%20St%20%232,%20Hialeah,%20FL%2033012&output=embed">
+      </iframe>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2026 Pavo Style Barber Shop · Hialeah, FL
+  © 2026 Pavo Style Barber Shop · Hialeah, FL
 </footer>
 
 <script>
-function checkStatus(){
-    const now = new Date();
-    const day = now.getDay(); // 0 = Domingo
-    const hour = now.getHours() + now.getMinutes()/60;
-
-    let open = false;
-
-    if(day >= 1 && day <= 6){
-        open = hour >= 9 && hour < 21;
-    }else{
-        open = hour >= 9 && hour < 16;
-    }
-
-    const status = document.getElementById("status");
-    if(open){
-        status.textContent = "🟢 ABIERTO AHORA";
-        status.className = "status open";
-    }else{
-        status.textContent = "🔴 CERRADO AHORA";
-        status.className = "status closed";
-    }
+function estado(){
+  const n=new Date(),d=n.getDay(),h=n.getHours()+n.getMinutes()/60;
+  const open=(d>=1&&d<=6)?(h>=9&&h<21):(h>=9&&h<16);
+  const s=document.getElementById("status");
+  s.textContent=open?"🟢 ABIERTO AHORA":"🔴 CERRADO AHORA";
+  s.className="status "+(open?"open":"closed");
 }
-checkStatus();
+estado();
+
+const vids=document.querySelectorAll(".autoVideo");
+vids.forEach(v=>{
+  v.addEventListener("click",()=>{
+    vids.forEach(o=>{if(o!==v){o.muted=true;o.controls=false}});
+    v.muted=false;
+    v.controls=true;
+    v.play();
+  });
+});
 </script>
 
 </body>
