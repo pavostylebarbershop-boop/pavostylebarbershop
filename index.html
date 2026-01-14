@@ -1,200 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Pavo Style Barber Shop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pavo Style Barber Shop en Hialeah. Fades limpios, estilos modernos y servicio profesional.">
-  <meta name="author" content="Pavo Style Barber Shop">
+<title>Pavo Style Barber Shop | Hialeah</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Pavo Style Barber Shop en Hialeah. Cortes modernos, fades, barba y servicio profesional.">
+<meta name="author" content="Pavo Style Barber Shop">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: #0b0b0b;
-      color: #f5f5f5;
-    }
+<!-- Open Graph -->
+<meta property="og:title" content="Pavo Style Barber Shop">
+<meta property="og:description" content="Barbería profesional en Hialeah. Reserva tu turno hoy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pavostylebarbershop.com">
+<meta property="og:image" content="logo.png">
 
-    /* HEADER */
-    header {
-      background: linear-gradient(180deg, #000 0%, #111 100%);
-      text-align: center;
-      padding: 40px 20px;
-    }
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    text-align:center;
+}
 
-    header img {
-      max-width: 260px;
-      width: 100%;
-      height: auto;
-    }
+header{
+    background:#000;
+    padding:30px;
+}
 
-    /* CONTAINER */
-    .container {
-      max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+header img{
+    max-width:260px;
+    width:100%;
+}
 
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 10px;
-    }
+section{
+    padding:40px 20px;
+}
 
-    .subtitle {
-      color: #c9a227;
-      margin-bottom: 30px;
-      font-size: 1.1rem;
-    }
+h1,h2{
+    color:#d4af37;
+}
 
-    .info {
-      line-height: 1.8;
-      color: #ddd;
-      font-size: 1.05rem;
-    }
+.status{
+    font-size:1.3em;
+    font-weight:bold;
+    margin:15px 0;
+}
 
-    .info a {
-      color: #c9a227;
-      text-decoration: none;
-      font-weight: 600;
-    }
+.open{ color:#2ecc71; }
+.closed{ color:#e74c3c; }
 
-    /* BOTONES */
-    .buttons {
-      margin-top: 40px;
-    }
+.button{
+    display:inline-block;
+    margin:10px;
+    padding:14px 22px;
+    background:#d4af37;
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:8px;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 35px;
-      background: #c9a227;
-      color: #000;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 50px;
-    }
+.whatsapp{
+    background:#25d366;
+    color:#000;
+}
 
-    .btn.secondary {
-      background: transparent;
-      color: #c9a227;
-      border: 2px solid #c9a227;
-    }
+.tiktok{
+    background:#010101;
+    color:#fff;
+    border:2px solid #d4af37;
+}
 
-    /* GALERÍA */
-    .gallery {
-      margin-top: 80px;
-    }
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
 
-    .gallery h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
+.gallery img, .gallery video{
+    width:100%;
+    border-radius:10px;
+}
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery-grid video {
-      width: 100%;
-      border-radius: 14px;
-      border: 2px solid #222;
-      background: #000;
-    }
-
-    /* WHATSAPP */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      border-radius: 50px;
-      padding: 14px 22px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      z-index: 999;
-    }
-
-    /* FOOTER */
-    footer {
-      margin-top: 80px;
-      padding: 25px;
-      background: #000;
-      color: #aaa;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-  </style>
+footer{
+    background:#000;
+    padding:20px;
+    font-size:0.9em;
+    color:#aaa;
+}
+</style>
 </head>
 
 <body>
 
-<!-- LOGO -->
 <header>
-  <img src="logo.png" alt="Pavo Style Barber Shop">
+    <img src="logo.png" alt="Pavo Style Barber Shop">
 </header>
 
-<div class="container">
-  <h1>Pavo Style Barber Shop</h1>
-  <div class="subtitle">Fades limpios • Estilos modernos • Servicio profesional</div>
+<section>
+    <h1>Pavo Style Barber Shop</h1>
+    <p>Barbería profesional en Hialeah. Cortes modernos, fades, barba y estilo.</p>
 
-  <div class="info">
-    📍 
-    <a href="https://www.google.com/maps/search/?api=1&query=Pavo+style+barber+shop,+1051+W+29th+St+#2,+Hialeah,+FL+33012" target="_blank">
-      Pavo style barber shop, 1051 W 29th St #2, Hialeah, FL 33012
-    </a><br>
-    📞 <a href="tel:+17868199106">+1 (786) 819-9106</a><br>
-    ⏰ Todos los días de 9:00 AM a 9:00 PM
-  </div>
+    <div id="status" class="status"></div>
 
-  <div class="buttons">
-    <a class="btn" href="tel:+17868199106">Llamar para reservar</a>
-    <a class="btn secondary"
-       href="https://www.google.com/maps/search/?api=1&query=Pavo+style+barber+shop,+1051+W+29th+St+#2,+Hialeah,+FL+33012"
-       target="_blank">
-      Cómo llegar
+    <p>
+        ⏰ <strong>Lunes a Sábado:</strong> 9:00 AM – 9:00 PM<br>
+        ⏰ <strong>Domingo:</strong> 9:00 AM – 4:00 PM
+    </p>
+
+    <a class="button" target="_blank"
+       href="https://www.google.com/maps/search/?api=1&query=Pavo+style+barber+shop,+1051+W+29th+St+%232,+Hialeah,+FL+33012">
+       📍 Ver ubicación en Google Maps
     </a>
-  </div>
 
-  <!-- GALERÍA DE VIDEOS -->
-  <div class="gallery">
+    <a class="button whatsapp" target="_blank"
+       href="https://wa.me/17868199106?text=Hola%20Pavo%20Style%20Barber%20Shop,%20quisiera%20reservar%20un%20turno.%20Gracias.">
+       💬 Reservar por WhatsApp
+    </a>
+
+    <a class="button tiktok" target="_blank"
+       href="https://www.tiktok.com/@rosnielgonzale">
+       🎵 Síguenos en TikTok
+    </a>
+</section>
+
+<section>
     <h2>Galería</h2>
-
-    <div class="gallery-grid">
-      <video controls>
-        <source src="gallery/video1.mp4" type="video/mp4">
-      </video>
-
-      <video controls>
-        <source src="gallery/video2.mp4" type="video/mp4">
-      </video>
-
-      <video controls>
-        <source src="gallery/video3.mp4" type="video/mp4">
-      </video>
+    <div class="gallery">
+        <video controls src="gallery/video1.mp4"></video>
+        <video controls src="gallery/video2.mp4"></video>
+        <video controls src="gallery/video3.mp4"></video>
+        <!-- Para fotos futuras:
+        <img src="gallery/foto1.jpg">
+        -->
     </div>
-  </div>
-
-</div>
-
-<!-- WHATSAPP -->
-<a class="whatsapp-float"
-   href="https://wa.me/17868199106?text=Hola%20Pavo%20Style%20Barber%20Shop,%20quisiera%20reservar%20un%20turno.%20Gracias."
-   target="_blank">
-  💬 WhatsApp
-</a>
+</section>
 
 <footer>
-  © 2026 Pavo Style Barber Shop • Todos los derechos reservados
+    © 2026 Pavo Style Barber Shop · Hialeah, FL
 </footer>
+
+<script>
+function checkStatus(){
+    const now = new Date();
+    const day = now.getDay(); // 0 = Domingo
+    const hour = now.getHours() + now.getMinutes()/60;
+
+    let open = false;
+
+    if(day >= 1 && day <= 6){
+        open = hour >= 9 && hour < 21;
+    }else{
+        open = hour >= 9 && hour < 16;
+    }
+
+    const status = document.getElementById("status");
+    if(open){
+        status.textContent = "🟢 ABIERTO AHORA";
+        status.className = "status open";
+    }else{
+        status.textContent = "🔴 CERRADO AHORA";
+        status.className = "status closed";
+    }
+}
+checkStatus();
+</script>
 
 </body>
 </html>
