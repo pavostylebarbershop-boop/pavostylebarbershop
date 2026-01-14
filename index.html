@@ -85,7 +85,7 @@ h1,h2{color:#d4af37;letter-spacing:1px}
 /* GALLERY */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
 .media{
@@ -98,6 +98,8 @@ h1,h2{color:#d4af37;letter-spacing:1px}
 }
 .media video{
   width:100%;
+  height:320px;          /* 🔽 videos más pequeños */
+  object-fit:cover;
   display:block;
 }
 .tap-sound{
@@ -138,8 +140,8 @@ h1,h2{color:#d4af37;letter-spacing:1px}
 }
 .slider-track{
   display:flex;
-  width:600%;
-  animation:slideReviews 36s infinite;
+  width:500%;
+  animation:slideReviews 100s infinite; /* ⏱️ 20s por reseña */
 }
 .slider-container:hover .slider-track{
   animation-play-state:paused;
@@ -156,12 +158,11 @@ h1,h2{color:#d4af37;letter-spacing:1px}
 .review-slide p{margin-top:12px;line-height:1.6;color:#e6e6e6}
 
 @keyframes slideReviews{
-  0%,16%{transform:translateX(0)}
-  20%,36%{transform:translateX(-100%)}
-  40%,56%{transform:translateX(-200%)}
-  60%,76%{transform:translateX(-300%)}
-  80%,96%{transform:translateX(-400%)}
-  100%{transform:translateX(0)}
+  0%,20%{transform:translateX(0)}
+  25%,45%{transform:translateX(-100%)}
+  50%,70%{transform:translateX(-200%)}
+  75%,95%{transform:translateX(-300%)}
+  100%{transform:translateX(-400%)}
 }
 
 /* MAP */
