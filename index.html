@@ -6,26 +6,29 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Pavo Style Barber Shop">
-  <meta name="description" content="Professional barber shop in Hialeah. Call or text to book your appointment.">
+  <meta name="description" content="Professional barber shop in Hialeah. Book your appointment today.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Pavo Style Barber Shop">
-  <meta property="og:description" content="Professional barber shop in Hialeah. Call or text to book your appointment.">
+  <meta property="og:description" content="Professional barber shop in Hialeah. Clean fades. Sharp styles.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pavostylebarbershop.com">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background: #0b0b0b;
       color: #f5f5f5;
     }
 
     header {
-      background: #000;
+      background: linear-gradient(180deg, #000 0%, #111 100%);
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     header img {
@@ -34,43 +37,71 @@
       height: auto;
     }
 
-    section {
+    .container {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 60px auto;
       padding: 0 20px;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
-    p {
+    .subtitle {
+      font-size: 1.2rem;
+      color: #c9a227;
+      margin-bottom: 30px;
+    }
+
+    .info {
       font-size: 1.1rem;
-      line-height: 1.6;
+      line-height: 1.8;
       color: #ddd;
+    }
+
+    .info a {
+      color: #c9a227;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    .buttons {
+      margin-top: 40px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
+      margin: 10px;
+      padding: 15px 35px;
       background: #c9a227;
       color: #000;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s ease;
+      font-weight: 700;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #c9a227;
+      border: 2px solid #c9a227;
     }
 
     .btn:hover {
-      background: #e0b83f;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201,162,39,0.3);
     }
 
     footer {
-      margin-top: 60px;
-      padding: 20px;
+      margin-top: 80px;
+      padding: 25px;
       text-align: center;
       font-size: 0.9rem;
       color: #aaa;
@@ -86,32 +117,37 @@
     <img src="logo.png" alt="Pavo Style Barber Shop Logo">
   </header>
 
-  <!-- MAIN CONTENT -->
-  <section>
-    <h1>Welcome to Pavo Style Barber Shop</h1>
-    <p>
-      Professional barber services in Hialeah.  
-      Quality cuts, clean fades, and attention to detail.
-    </p>
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>Pavo Style Barber Shop</h1>
+    <div class="subtitle">Clean Fades • Sharp Styles • Professional Service</div>
 
-    <p>
-      📍 1051 W 29th St #2, Hialeah, FL 33012  
+    <div class="info">
+      📍 
+      <a href="https://www.google.com/maps/place/Pavo+style+barber+shop/@25.848252,-80.303366"
+         target="_blank">
+        1051 W 29th St #2, Hialeah, FL 33012
+      </a>
       <br>
-      📞 +1 (786) 819-9106  
+      📞 <a href="tel:+17868199106">+1 (786) 819-9106</a>
       <br>
-      ⏰ Open daily from 9:00 AM to 9:00 PM
-    </p>
+      ⏰ Open daily: <strong>9:00 AM – 9:00 PM</strong>
+    </div>
 
-    <a class="btn" href="tel:+17868199106">
-      Book Your Appointment
-    </a>
-  </section>
+    <div class="buttons">
+      <a class="btn" href="tel:+17868199106">Call to Book</a>
+      <a class="btn secondary"
+         href="https://www.google.com/maps/place/Pavo+style+barber+shop/@25.848252,-80.303366"
+         target="_blank">
+        Get Directions
+      </a>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
-    © 2026 Pavo Style Barber Shop Inc. All rights reserved.
+    © 2026 Pavo Style Barber Shop Inc. • All rights reserved
   </footer>
 
 </body>
 </html>
-
